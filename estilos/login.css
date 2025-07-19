@@ -1,0 +1,208 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top left, #181818, #232323 80%, #000 100%);
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Imagen de fondo decorativa */
+.bg-art {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  max-width: 70%;
+  z-index: 0;
+  opacity: 0.7;
+  filter: blur(1px);
+}
+
+/* Contenedor principal */
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  z-index: 1;
+  background: #232323;
+  border-radius: 32px;
+  box-shadow:
+    8px 8px 24px #181818,
+    -8px -8px 24px #2e2e2e,
+    0 1.5px 8px #0008;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* Logo estilo neumorfismo */
+.logo {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #232323;
+  border-radius: 12px;
+  box-shadow:
+    2px 2px 8px #181818,
+    -2px -2px 8px #2e2e2e;
+  padding: 0.5rem 1rem;
+}
+
+h2 {
+  font-size: 3.6rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #fff;
+  text-shadow: 0 2px 8px #18181888;
+  width: 100%;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 14px;
+  background: #232323 !important;
+  color: #bdbdbd !important;
+  font-size: 1rem;
+  box-shadow:
+    4px 4px 12px #181818,
+    -4px -4px 12px #2e2e2e,
+    0 1.5px 8px #0008;
+  transition: box-shadow 0.2s, background 0.2s, color 0.2s;
+  outline: none;
+  -webkit-box-shadow: 0 0 0 1000px #232323 inset, 4px 4px 12px #181818, -4px -4px 12px #2e2e2e, 0 1.5px 8px #0008 !important;
+  box-shadow: 0 0 0 1000px #232323 inset, 4px 4px 12px #181818, -4px -4px 12px #2e2e2e, 0 1.5px 8px #0008 !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px #232323 inset !important;
+  box-shadow: 0 0 0 1000px #232323 inset, 4px 4px 12px #181818, -4px -4px 12px #2e2e2e, 0 1.5px 8px #0008 !important;
+  -webkit-text-fill-color: #bdbdbd !important;
+  color: #bdbdbd !important;
+  caret-color: #bdbdbd !important;
+  border: none;
+}
+
+input:focus {
+  background: #262626 !important;
+  color: #fff !important;
+  -webkit-box-shadow: 0 0 0 1000px #262626 inset, 2px 2px 8px #181818, -2px -2px 8px #2e2e2e, 0 1.5px 8px #0008 !important;
+  box-shadow: 0 0 0 1000px #262626 inset, 2px 2px 8px #181818, -2px -2px 8px #2e2e2e, 0 1.5px 8px #0008 !important;
+}
+
+input::placeholder {
+  color: #bdbdbd !important;
+  opacity: 1;
+}
+
+.indicator {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  box-shadow:
+    2px 2px 8px #181818,
+    -2px -2px 8px #2e2e2e;
+  border: 2px solid #232323;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 0.9rem;
+  background: #232323;
+  border: none;
+  border-radius: 14px;
+  font-size: 1.1rem;
+  color: white;
+  cursor: pointer;
+  box-shadow:
+    4px 4px 12px #181818,
+    -4px -4px 12px #2e2e2e;
+  transition: background 0.3s, color 0.2s, box-shadow 0.2s, transform 0.15s;
+  margin-top: 0.5rem;
+}
+
+.login-btn:hover,
+.login-btn:focus {
+  background: #262626;
+  color: #ffe600;
+  transform: translateY(-4px) scale(1.04);
+  box-shadow:
+    2px 2px 8px #181818,
+    -2px -2px 8px #2e2e2e;
+}
+
+.link {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-top: 1.5rem;
+  display: block;
+  text-align: center;
+}
+
+.link:hover {
+  color: #fff;
+}
+.input-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.input-group i {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.1rem;
+  pointer-events: none; /* que no interfiera con el input */
+}
+
+/* Colores para íconos */
+.icon-valid {
+  color: #0f0; /* verde */
+}
+
+.icon-invalid {
+  color: #f00; /* rojo */
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.4rem;
+  }
+  .login-container {
+    padding-bottom: 4rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
