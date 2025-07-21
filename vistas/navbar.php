@@ -1,6 +1,7 @@
 <?php
-session_start(); //Iniciamos la sesión, accedemos a toda las variables de $_session para saber si está logueado o no
-?>
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}?>
 <!--Creamos una navbar y le asignamos su estilo-->
 <nav class="navbar-simple">
     <link rel="stylesheet" href="../estilos/navbar.css">
@@ -18,7 +19,6 @@ session_start(); //Iniciamos la sesión, accedemos a toda las variables de $_ses
         <?php if (!isset($_SESSION['nombre'])): ?>
             <a href="../vistas/login.php" class="navbar-button">Iniciar Sesión</a>
         <?php else: ?>
-            <span class="navbar-user">Hola, <?php echo htmlspecialchars($_SESSION['nombre']); ?></span>
             <form action="../controladores/logout.php" method="post" style="display:inline;">
                 <button type="submit" class="navbar-button logout">Cerrar sesión</button>
             </form>
