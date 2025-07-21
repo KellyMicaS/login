@@ -69,3 +69,12 @@
 .logout:hover {
     background-color: #a93226;
 }
+
+
+.logout {
+    background-color: #c0392b;
+}
+
+.logout:hover {
+    background-color: #a93226;
+}

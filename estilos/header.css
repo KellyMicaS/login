@@ -1,0 +1,85 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: aliceblue;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2.5rem 2.5rem 1.5rem 2.5rem; /* Más espacio arriba */
+    margin-top: 0.5rem; /* Más espacio superior */
+}
+
+.header-left,
+.header-center,
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.header-left {
+    flex: 0 0 auto;
+    padding-left: 1.5rem;
+}
+
+.header-right {
+    flex: 0 0 auto;
+    padding-right: 7.5rem;
+}
+
+.header button {
+    background: none;
+    border: none;
+    color: aliceblue;
+    font-size: 1.25rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    position: relative;
+    transition: color 0.2s;
+    outline: none;
+}
+
+.header button::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0;
+    margin: 0 auto;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #F2644C, #F6BA5D, #41C1DA, #4380E0, #ffe600);
+    transition: width 0.3s;
+}
+
+.header button:hover::after,
+.header button:focus::after {
+    width: 100%;
+}
+
+.header button:hover,
+.header button:focus {
+    color: #a7a7a7;
+    background: none;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.user-photo {
+    height: 50px;
+    width: 50px;
+    margin: auto;
+    border-radius: 50%;
+    object-fit: cover;
+}

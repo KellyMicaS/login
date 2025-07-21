@@ -29,7 +29,7 @@ if ($datos) {
         $_SESSION['login']     = $datos['login'];
         $_SESSION['rol']       = $datos['rol'];
         //Se muestra una alerta en ventana que le da la bienvenida al usuario
-        echo "<script>alert('Bienvenido al sistema!:)'); window.location='../index.php';</script>";
+        echo "<script>alert('Bienvenido al sistema!:)'); window.location='../vistas/index.php';</script>";
         exit;
     } else {
         //Si la contraseña es incorrecta, salta una alerta en ventana que dice "contraseña incorrecta"

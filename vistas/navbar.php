@@ -10,7 +10,7 @@ session_start(); //Iniciamos la sesión, accedemos a toda las variables de $_ses
     </div>
     <!--Aquí le decimos al navbar que enlaces incluir, en este caso: Login, info del usuario logueado o registrarse-->
     <div class="navbar-links">
-        <a href="../index.php">Inicio</a>
+        <a href="../vistas/index.php">Inicio</a>
 
         <!--!isset es una función que sirve para verificar si una variable existe o no, devuelve true o false-->
         <!--Para hacer un if en php utilizamos la siguiente estructura para hacer un if en php

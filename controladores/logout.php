@@ -10,5 +10,5 @@ session_unset();
 session_destroy();
 
 //Redirige al usuario a la página de inicio, sacandolo del área protegida por inicio de sesión
-header("Location: ../index.php");
+header("Location: ../vistas/index.php");
 exit;
