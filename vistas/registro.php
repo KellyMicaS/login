@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Registrarse</title>
+  <!--Declaramos el utf-8, asignamos los estilos y un cdn de font awesome.-->
   <link rel="stylesheet" href="../estilos/registro.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="icon" type="image/png" href="../recursos/favicon.ico">
@@ -10,12 +11,12 @@
 <body>
   <div class="registro-container">
     <div class="form-section">
-      <!-- Logo en la parte superior del formulario -->
+      <!--Logo en la parte superior del formulario-->
       <div class="logo">
         <img src="../recursos/favicon.ico" alt="DotBox Studio">
         <span>DotBox Studio</span>
       </div>
-
+      <!--Registro completo-->
       <h2>Registro</h2>
       <form action="../controladores/procesar_registro.php" method="POST">
         <div class="input-wrapper">
@@ -43,7 +44,7 @@
       <a href="login.php" class="link">¿Ya tienes cuenta? Inicia Sesión</a>
     </div>
 
-    <!-- Imagen grande decorativa a la derecha -->
+    <!--Asignamos la imagen del formulario-->
     <div class="imagen-section">
       <img src="../recursos/logotipo-8.png" alt="DotBox Studio">
     </div>
