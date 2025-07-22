@@ -17,11 +17,16 @@ if (session_status() === PHP_SESSION_NONE) {
         <!--Para hacer un if en php utilizamos la siguiente estructura para hacer un if en php
         y comprobar toda la info de la variable sesion-->
         <?php if (!isset($_SESSION['nombre'])): ?>
-            <a href="../vistas/login.php" class="navbar-button">Iniciar Sesión</a>
-        <?php else: ?>
-            <form action="../controladores/logout.php" method="post" style="display:inline;">
-                <button type="submit" class="navbar-button logout">Cerrar sesión</button>
-            </form>
-        <?php endif; ?> <!--El endif sirve para cerrar el if, en php es un poco diferente-->
+    <a href="../vistas/login.php" class="navbar-button">Iniciar Sesión</a>
+<?php else: ?>
+    <?php if ($_SESSION['rol'] === 'admin'): ?>
+        <a href="../vistas/usuario.php" class="navbar-button">Administrar Usuarios</a>
+    <?php endif; ?>
+
+    <form action="../controladores/logout.php" method="post" style="display:inline;">
+        <button type="submit" class="navbar-button logout">Cerrar sesión</button>
+    </form>
+<?php endif; ?>
+ <!--El endif sirve para cerrar el if, en php es un poco diferente-->
     </div>
 </nav>

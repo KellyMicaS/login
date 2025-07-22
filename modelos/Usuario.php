@@ -1,8 +1,6 @@
 <?php
-//Llamamos a la conexión con la BDD para poder acceder
 require_once "../config/Conexion.php";
 
-//Definimos una clase para poder aplicar todos los métodos en el usuario
 class Usuario {
 
     //Registramos un nuevo usuario
@@ -25,6 +23,35 @@ class Usuario {
         $sql = "SELECT * FROM usuario 
                 WHERE login = '$usuario' OR correo = '$usuario' LIMIT 1";
         return ejecutarConsultaSimpleFila($sql);
+    }
+    public function __construct(){}
+
+    public function insertar($nombre, $apellido, $login, $correo, $password, $rol){
+        $sql = "INSERT INTO usuario (nombre, apellido, login, correo, password, rol)
+                VALUES ('$nombre','$apellido','$login','$correo','$password','$rol')";
+        return ejecutarConsulta($sql);
+    }
+
+    public function editar($idusuario, $nombre, $apellido, $login, $correo, $password, $rol){
+        $sql = "UPDATE usuario SET nombre='$nombre', apellido='$apellido',
+                login='$login', correo='$correo', password='$password', rol='$rol'
+                WHERE idusuario='$idusuario'";
+        return ejecutarConsulta($sql);
+    }
+
+    public function mostrar($idusuario){
+        $sql = "SELECT * FROM usuario WHERE idusuario='$idusuario'";
+        return ejecutarConsultaSimpleFila($sql);
+    }
+
+    public function listar(){
+        $sql = "SELECT * FROM usuario";
+        return ejecutarConsulta($sql);
+    }
+
+    public function cambiarRol($idusuario, $rol){
+        $sql = "UPDATE usuario SET rol='$rol' WHERE idusuario='$idusuario'";
+        return ejecutarConsulta($sql);
     }
 }
 ?>
