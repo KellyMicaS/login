@@ -67,7 +67,7 @@ if (!isset($_SESSION['nombre'])) {
                         <img src="../recursos/kairilogo.png" alt="Foto 1" class="bento-photo">
                     </div>
                     <div class="card-face-inner card-back">
-                        <p>Descripción o texto para la primera imagen.</p>
+                        <p>Kairi Creative es mi marca personal, desarrollada en base a mi amor por el mar, los tulipanes y la creatividad! No existen limites para Kairi Creative.</p>
                     </div>
                 </div>
             </div>
@@ -78,7 +78,7 @@ if (!isset($_SESSION['nombre'])) {
                         <img src="../recursos/cricrifood.png" alt="Foto 2" class="bento-photo">
                     </div>
                     <div class="card-face-inner card-back">
-                        <p>Descripción o texto para la segunda imagen.</p>
+                        <p>CriCriFood es una marca de alimentación sana basada en grillos. Destaca por sus colores frescos y armoniosos, no dudes en probarla!</p>
                     </div>
                 </div>
             </div>
